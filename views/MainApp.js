@@ -46,10 +46,15 @@ export default class MainApp extends Component{
 	onReset = () =>{
 		this.setState({taps: 0});
 	}
+	onDecrease = () =>{
+		this.setState({taps: this.state.taps-1});
+	}
 	render(){
 		return(
 		  <View>
-		  	<Text>{this.state.taps} Taps</Text>
+		  	<TouchableHighlight onPress={()=>{this.onDecrease()}} underlay="FEFEFE" activeOpacity={0.7}>
+		  		<Text>{this.state.taps} Taps</Text>
+		  	</TouchableHighlight>
 		  	<Button onPress={()=>{this.onTaps()}}/>
 		  	<Reset onPress={()=>{this.onReset()}}/>
 		  </View>
