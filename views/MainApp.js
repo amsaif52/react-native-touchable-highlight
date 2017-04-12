@@ -12,7 +12,7 @@ class Button extends Component{
 
 	render(){
 		return(
-			<TouchableHighlight onPress={() => {this.props.onPress()}} underlayColor="white" activeOpacity={0.8}>
+			<TouchableHighlight onPress={() => {this.props.onPress()}}>
 			 <View>
 			 	<Text>Tap Me</Text>
 			 </View>
@@ -24,7 +24,7 @@ class Button extends Component{
 class Reset extends Component{
 	render(){
 		return(
-			<TouchableHighlight onPress={()=>{this.props.onPress()}} underlayColor="white" activeOpacity={0.8}>
+			<TouchableHighlight onPress={()=>{this.props.onPress()}}>
 				<View>
 					<Text>
 					  Reset
@@ -52,7 +52,7 @@ export default class MainApp extends Component{
 	render(){
 		return(
 		  <View>
-		  	<TouchableHighlight onPress={()=>{this.onDecrease()}} underlay="FEFEFE" activeOpacity={0.7}>
+		  	<TouchableHighlight onPress={()=>{this.onDecrease()}}>
 		  		<Text>{this.state.taps} Taps</Text>
 		  	</TouchableHighlight>
 		  	<Button onPress={()=>{this.onTaps()}}/>
